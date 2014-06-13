@@ -35,4 +35,23 @@ class GrainsTest < MiniTest::Unit::TestCase
     assert_equal 18446744073709551615, Grains.new.total
   end
 
+  def test_total_grains_upto_position_1
+    assert_equal 1, Grains.new.total(1)
+  end
+
+  def test_total_grains_upto_position_2
+
+    assert_equal 3, Grains.new.total(2)
+  end
+
+  def test_total_grains_upto_position_3
+
+    assert_equal 7, Grains.new.total(3)
+  end
+
+  def test_total_grains_upto_position_4
+
+    assert_equal 15, Grains.new.total(4)
+  end
+
 end

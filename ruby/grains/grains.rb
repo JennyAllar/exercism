@@ -1,13 +1,9 @@
 class Grains
-  def square(num)
-
-    num = num - 1
-    @grain = 2 ** num
-    return @grain
+  def square(square_position)
+    2 ** (square_position - 1)
   end
-
-  def total
-    grain_total = (2 ** 64) - 1
-    return grain_total
+  
+  def total(square_position = 64)
+    square(square_position) * 2 - 1
   end
 end
